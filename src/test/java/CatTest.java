@@ -9,7 +9,6 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.Arrays;
-
 import static local.helpers.ArrayHelpers.equalsArrayValues;
 import static org.junit.Assert.*;
 
@@ -47,7 +46,6 @@ public class CatTest {
         assertEquals("Мяу", cat.getSound());
     }
 
-
     /*
      * Test getting food Cat
      * */
@@ -60,7 +58,6 @@ public class CatTest {
             System.out.println("Ошибка при получении еды в классе Cat" + e);
         }
     }
-
 
     /*
      * Test getting food Cat

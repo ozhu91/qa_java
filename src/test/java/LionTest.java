@@ -1,18 +1,12 @@
 import com.example.Feline;
 import com.example.Lion;
 import static org.junit.Assert.*;
-
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import static local.helpers.ArrayHelpers.equalsArrayValues;
-
 
 
 @RunWith(Parameterized.class)
@@ -42,7 +36,6 @@ public class LionTest {
                 );
     }
 
-
     /*
      * Test getting count kitten
      * */
@@ -54,7 +47,6 @@ public class LionTest {
         } catch (Exception e) {
             System.out.println("Ошибка при создании экзепляра класса Lion: " + e);
         }
-
     }
 
     /*
