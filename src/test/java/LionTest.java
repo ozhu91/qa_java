@@ -1,9 +1,14 @@
 import com.example.Feline;
 import com.example.Lion;
 import static org.junit.Assert.*;
+
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import static local.helpers.ArrayHelpers.equalsArrayValues;
@@ -74,8 +79,6 @@ public class LionTest {
             Lion lion = new Lion (sex, feline) ;
             try {
                 List<String> lionFood = lion.getFood();
-                System.out.println(meal);
-                System.out.println(lionFood);
                 assertTrue(equalsArrayValues(meal, lionFood));
             } catch(Exception e) {
                 System.out.println("Ошибка при получение еду для класса Lion: " + e);
@@ -83,6 +86,14 @@ public class LionTest {
         } catch (Exception e) {
             System.out.println("Ошибка при создании экзепляра класса Lion: " + e);
         }
+    }
+
+    /*
+    * Test error exception init Lion
+    * */
+    @Test(expected = Exception.class)
+    public void testInitLionException() throws Exception{
+        Lion lion = new Lion ("Еще что нибудь", feline);
     }
 
 }
