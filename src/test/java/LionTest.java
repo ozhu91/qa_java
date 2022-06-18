@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.List;
+import static local.helpers.ArrayHelpers.equalsArrayValues;
 
 
 
@@ -36,14 +37,6 @@ public class LionTest {
                 );
     }
 
-    private boolean equalsArrayValues(List<String>ActualArr, List<String>expectedArr) {
-        for(String item : ActualArr) {
-            if(!expectedArr.contains(item)) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     /*
      * Test getting count kitten
